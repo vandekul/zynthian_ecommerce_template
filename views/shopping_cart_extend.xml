@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Customize layout  -->
+		<template id="shopping_cart_extend" inherit_id="website_sale.cart" name="Extend Shopping Cart">
+			<!-- Replace elements  -->
+			<xpath expr="//div[@id='wrap']" position="replace">
+				<div class="container oe_website_sale">
+		          <t t-call="website_sale.wizard_checkout">
+		            <t t-set="step" t-value="10"/>
+		          </t>
+		          <h1 class="mb32">Shopping Cart</h1>
+		              <div class="oe_cart">
+
+		                  <t t-call="website_sale.cart_lines"/>
+
+		                  <div class="clearfix"/>
+
+		                  <a t-if="not optional_products and website_sale_order and website_sale_order.website_order_line" class="btn btn-primary pull-right mb32" href="/shop/checkout"><span class="hidden-xs">Process Checkout</span><span class="visible-xs-inline">Checkout</span> <span class="fa fa-long-arrow-right"/></a>
+
+		                  <div class="oe_structure"/>
+		              </div>
+		        </div>
+		        <div class="oe_structure"/>
+			</xpath>
+		</template>
+	</data>
+</openerp>
