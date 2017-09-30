@@ -23,6 +23,7 @@
         
         - website_sale.total (total.html) --> total_extend.xml / delivery_extend.xml
             -- Delete Taxes field
+	    -- Delete Subtotal field
             -- Included Delivery Costs before Total Costs
 
         - website_sale.wizard_checkout
@@ -39,7 +40,6 @@
         'views/checkout_extend.xml',
         'views/payment_extend.xml',
         'views/wizard_checkout_extend.xml',
-
     ],
     'demo': [],
     'installable': True,
