@@ -9,6 +9,7 @@
 
         - website_sale.checkout (checkout.html) --> checkout_extend.xml
             --Delete fields: VAT number and Company Name
+            --Delete State/Province field
             --Delete Billing Address (it will be the same than Shipping Address)
             --Delete Sign In Button
 
