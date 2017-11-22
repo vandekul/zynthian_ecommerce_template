@@ -32,6 +32,7 @@
 
         Important:
         - Desactivar la vista Shipping Country and states (manualment de moment)
+        - Desactivar la vista Product Categories (website_sale.products_categories, manualment)
         """,
     'author': 'mumaker',
     'depends': ['website'],
@@ -41,6 +42,7 @@
         'views/checkout_extend.xml',
         'views/payment_extend.xml',
         'views/wizard_checkout_extend.xml',
+        'views/product_categories_extend.xml'
     ],
     'demo': [],
     'installable': True,
