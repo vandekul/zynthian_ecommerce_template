@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<data inherit_id="website_sale.products" name="Product Categories Extend">
+<data>
+	<template id="product_categories_extend" inherit_id="website_sale.products" name="Product Categories Extend">
   <xpath expr="//div[@id='products_grid_before']" position="inside">
-      <t t-call="website_sale.search"><t t-set="search_class">pagination form-inline</t></t>
+     <t t-call="website_sale.search"><t t-set="search_class">pagination form-inline</t></t>
       <ul class="nav nav-pills nav-stacked mt16">
-          <li t-att-class=" '' if category else 'active' "/>
+          <li t-att-class=" '' if category else 'active' "></li>
           <t t-foreach="categories" t-as="c">
               <t t-call="website_sale.categories_recursive"/>
           </t>
@@ -16,4 +17,5 @@
   <xpath expr="//div[@id='products_grid']" position="attributes">
       <attribute name="class">col-md-9 col-sm-8</attribute>
   </xpath>
+	</template>
 </data>
