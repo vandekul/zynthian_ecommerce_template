@@ -30,6 +30,13 @@
         - website_sale.wizard_checkout
             --Modify literal Shipping&Billing by Shipping Address
 
+        - website_sale.product_categories_extend
+            -- Delete "All products" tag
+            -- Add List Categories for small devices
+
+        -- assets.xml
+            -- Edit ecommerce style
+
         Important:
         - Desactivar la vista Shipping Country and states (manualment de moment)
         - Desactivar la vista Product Categories (website_sale.products_categories, manualment)
@@ -42,7 +49,8 @@
         'views/checkout_extend.xml',
         'views/payment_extend.xml',
         'views/wizard_checkout_extend.xml',
-        'views/product_categories_extend.xml'
+        'views/product_categories_extend.xml',
+        'views/assets.xml'
     ],
     'demo': [],
     'installable': True,
