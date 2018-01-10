@@ -24,7 +24,7 @@
         
         - website_sale.total (total.html) --> total_extend.xml / delivery_extend.xml
             -- Delete Taxes field
-	    -- Delete Subtotal field
+	        -- Delete Subtotal field
             -- Included Delivery Costs before Total Costs
 
         - website_sale.wizard_checkout
@@ -34,7 +34,13 @@
             -- Delete "All products" tag
             -- Add List Categories for small devices
 
-        -- assets.xml
+        - website_sale.product_extend
+            -- Delete conditions of shipping
+
+        - website_sale.cart_lines_extend
+            -- Delete product description
+
+        - assets.xml
             -- Edit ecommerce style
 
         Important:
@@ -50,7 +56,8 @@
         'views/payment_extend.xml',
         'views/wizard_checkout_extend.xml',
         'views/product_categories_extend.xml',
-        'views/assets.xml'
+        'views/product_extend.xml',
+        'views/cart_lines_extend.xml'
     ],
     'demo': [],
     'installable': True,
