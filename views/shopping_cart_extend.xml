@@ -5,6 +5,8 @@
 		<template id="shopping_cart_extend" inherit_id="website_sale.cart" name="Extend Shopping Cart">
 			<!-- Replace elements  -->
 			<xpath expr="//div[@id='right_column']" position="replace">
+				<div class="col-lg-3 col-lg-offset-1 col-sm-3 col-md-3 text-muted" id="right_column">
+				</div>
 			</xpath>
 		</template>
 	</data>

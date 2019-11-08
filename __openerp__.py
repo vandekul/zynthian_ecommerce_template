@@ -21,6 +21,7 @@
         
         - website_sale.cart (shopping_cart.html) --> shopping_cart_extend.xml
             -- Delete Policies and Secure Payment
+            -- Need to change manually website_sale.reduction_code in order to extend from this view
         
         - website_sale.total (total.html) --> total_extend.xml / delivery_extend.xml
             -- Delete Taxes field
