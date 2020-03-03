@@ -73,14 +73,29 @@
                                 </div>-->
                                 <div class="clearfix"/>
                            </div>
- 
+                            <div t-if="'TestCursor' not in repr(env.cr)" class="row">
+                                <div t-attf-class="form-group col-md-12 #{error.get('accepted_legal_terms') and
+                                'has-error' or ''}">
+                                    <label for="accepted_legal_terms" class="control-label">
+                                        <input type="checkbox"
+                                            name="accepted_legal_terms"
+                                            id="accepted_legal_terms"
+                                            required="required"/>
+                                        <t t-call="zynthian_ecommerce_template.acceptance_full"/>
+                                    </label>
+                                </div>
+                            </div>
                             <div class="clearfix">
                                 <a href="/shop/cart" class="btn btn-default mb32">
                                     <span class="fa fa-long-arrow-left"/> Return to Cart
                                 </a>
-                                <a class="btn btn-default btn-primary pull-right mb32 a-submit">Confirm 
+                                <button class="btn btn-primary pull-right mb32">
+                                    Confirm
                                     <span class="fa fa-long-arrow-right"/>
-                                </a>
+                                </button>
+                                <!--<a class="btn btn-default btn-primary pull-right mb32 a-submit">Confirm 
+                                    <span class="fa fa-long-arrow-right"/>
+                                </a>-->
                             </div>
                         </div>
                         <div class="col-lg-offset-1 col-lg-3 col-md-3 text-muted">
