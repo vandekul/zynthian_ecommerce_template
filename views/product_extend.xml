@@ -20,6 +20,10 @@
           <p t-if="len(product.product_variant_ids) &gt; 1" class="css_not_available_msg bg-danger" style="padding: 15px;">Product not available</p>
 
           <a id="add_to_cart" class="btn btn-primary btn-lg mt8 js_check_product a-submit" href="#">Add to Cart</a>
+          
+          <br/>
+          <a id="sold_out_warning" class="btn btn-primary btn-lg mt8" href="#"
+          style="display:none;">SOLD OUT!</a>
           </div>
         </form>
 
