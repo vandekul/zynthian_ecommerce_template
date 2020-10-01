@@ -8,7 +8,7 @@
         Modification of:
 
         - website_sale.checkout (checkout.html) --> checkout_extend.xml
-            --Delete fields: VAT number and Company Name
+            [--Delete fields: VAT number and Company Name ] -> Active again 1/10/20
             --Delete State/Province field
             --Delete Billing Address (it will be the same than Shipping Address)
             --Delete Sign In Button
@@ -26,6 +26,7 @@
             -- Delete Taxes field
 	        -- Delete Subtotal field
             -- Included Delivery Costs before Total Costs
+            * 1/10/20 : Not imported total_exend.xml
 
         - website_sale.wizard_checkout
             --Modify literal Shipping&Billing by Shipping Address
@@ -51,7 +52,6 @@
     'depends': ['website'],
     'data': [
         'views/shopping_cart_extend.xml',
-        'views/total_extend.xml',
         'views/checkout_extend.xml',
         'views/payment_extend.xml',
         'views/wizard_checkout_extend.xml',
