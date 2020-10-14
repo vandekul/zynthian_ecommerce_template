@@ -12,6 +12,7 @@
             --Delete State/Province field
             --Delete Billing Address (it will be the same than Shipping Address)
             --Delete Sign In Button
+            [-- Prepared Invoice Required Info but not active, only VAT number that must be deleted from shipping form, it includes javaScript]
 
         - website_sale.payment (payment.html) --> payment_extend.xml
             --Change product layout (table) 
@@ -44,6 +45,8 @@
         - assets.xml
             -- Edit ecommerce style
 
+        - Acceptance policy included and also mandatory an required fiels to be validate from the form
+            --  /controllers/main.py
         Important:
         - Desactivar la vista Shipping Country and states (manualment de moment)
         - Desactivar la vista Product Categories (website_sale.products_categories, manualment)

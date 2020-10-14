@@ -2,7 +2,7 @@
 # Copyright 2015 Tecnativa - Jairo Llopis
 # Copyright 2016 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-
+from openerp import http
 from openerp.http import request
 from openerp.sql_db import TestCursor
 from openerp import SUPERUSER_ID
@@ -10,6 +10,16 @@ from openerp.addons.website_sale.controllers.main import website_sale
 import logging
 
 _logger = logging.getLogger(__name__)
+
+class website_sale_mandatory_mod(website_sale):
+    
+    @http.route(['/shop/confirm_order'], type='http', auth="public", website=True)
+    def confirm_order(self, **post):
+        self.mandatory_billing_fields  = ["name", "email", "phone", "street2", "city", "country_id", "zip","vat"]
+        self.optional_billing_fields   = ["street", "state_id"]
+        self.mandatory_shipping_fields = ["name", "email", "phone", "street2", "city", "country_id", "zip"]
+        self.optional_shipping_fields  = ["state_id"]
+        return super(website_sale_mandatory_mod,self).confirm_order(**post)
 
 class RequireLegalTermsToCheckout(website_sale):
     def checkout_parse(self, address_type, data, remove_prefix=False,
@@ -62,13 +72,12 @@ class RequireLegalTermsToCheckout(website_sale):
         return res
 
     def checkout_form_validate(self, data, *args, **kwargs):
-        """Require accepting legal terms to buy."""
-        errors = (super(RequireLegalTermsToCheckout, self)
-                  .checkout_form_validate(data, *args, **kwargs))
+        error, error_message = (super(RequireLegalTermsToCheckout, self).checkout_form_validate(data, *args, **kwargs))
 
         # If it is ``None``, then there is no need to check it
         if data.get("accepted_legal_terms") is False:
-            errors["accepted_legal_terms"] = "missing"
-            _logger.info('errors[accepted_legal_terms] = %s', errors["accepted_legal_terms"])
+            error["accepted_legal_terms"] = 'missing'
+            error_message.append('Acceptance legal terms required')
+            #_logger.info('errors[accepted_legal_terms] = %s', errors["accepted_legal_terms"])
 
-        return errors
+        return error, error_message

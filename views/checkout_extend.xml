@@ -76,7 +76,19 @@
                                     </select>
                                 </div>-->
                                 <div class="clearfix"/>
-                           </div>
+                            </div>
+                            <!--<script type="text/javascript" src="/zynthian_ecommerce_template/static/src/js/billing_required.js"></script>
+                            <label for="billing_required" class="control-label"> 
+                                <input type="checkbox" name="billing_required" id="billing_required"/> Invoice needed
+                            </label>
+
+                            <div id="billing" style="display: none;">
+                                <h3 class="page-header mt16">Billing Information </h3>
+                                <div t-if="has_check_vat" t-attf-class="form-group #{error.get('vat') and 'has-error' or ''} col-lg-6">
+                                    <label class="control-label label-optional" for="vat">VAT Number</label>
+                                    <input type="text" name="vat" class="form-control" t-att-value="checkout.get('vat')"/>
+                                </div>
+                            </div>-->
                             <div t-if="'TestCursor' not in repr(env.cr)" class="row">
                                 <div t-attf-class="form-group col-md-12 #{error.get('accepted_legal_terms') and
                                 'has-error' or ''}">
