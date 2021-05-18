@@ -61,7 +61,8 @@
         'views/product_categories_extend.xml',
         'views/product_extend.xml',
         'views/cart_lines_extend.xml',
-        'views/reusable_templates.xml'
+        'views/reusable_templates.xml',
+        'views/website_legal_footer_extend.xml'
     ],
     'demo': [],
     'installable': True,

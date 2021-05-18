@@ -16,7 +16,7 @@ class website_sale_mandatory_mod(website_sale):
     @http.route(['/shop/confirm_order'], type='http', auth="public", website=True)
     def confirm_order(self, **post):
         self.mandatory_billing_fields  = ["name", "email", "phone", "street2", "city", "country_id", "zip"]
-        self.optional_billing_fields   = ["street", "state_id"]
+        self.optional_billing_fields   = ["vat","street", "state_id"]
         self.mandatory_shipping_fields = ["name", "email", "phone", "street2", "city", "country_id", "zip"]
         self.optional_shipping_fields  = ["state_id"]
         return super(website_sale_mandatory_mod,self).confirm_order(**post)

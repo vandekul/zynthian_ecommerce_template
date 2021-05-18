@@ -5,7 +5,7 @@
 	<template id="acceptance_full">
 	    I've read and accept the 
 	    <a href="/page/privacy-policy">privacy policy</a> and 
-	    <a href="/page/termsandconditions">terms &amp; conditions</a> of this website.
+	    <a href="/page/terms-conditions">terms &amp; conditions</a> of this website.
 	</template>
 
 </odoo>

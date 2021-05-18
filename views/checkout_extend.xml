@@ -101,6 +101,40 @@
                                     </label>
                                 </div>
                             </div>
+                            <section class="s_faq_collapse">
+                                <div class="container">
+                                    <div class="panel-group" role="tablist" id="myCollapse1621377638779">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" data-toggle="collapse" data-parent="#myCollapse1621377638779" data-target="#myCollapseTab1621377638779">
+                                                <p class="panel-title o_default_snippet_text">
+                                                <font style="font-size: 12px;">
+                                                    Before confirm checkout form, please take a look at the basic data protection information here ⮟
+                                                </font>
+                                                </p>
+                                            </div>
+                                            <div class="panel-collapse collapse" role="tabpanel" id="myCollapseTab1621377638779">
+                                                <div class="panel-body">
+                                                    <font style="font-size: 12px;">
+                                                        <b>Responsible</b>: Susana Fort Mancha <br/>
+                                                        
+                                                        <b>Purpose</b>: Shipment of the requested product. <br/>
+                                                        
+                                                        <b>Legitimation</b>: Consent of the User (interested). <br/>
+                                                        
+                                                        <b>Recipients</b>: Transport company and internal information. <br/>
+                                                        
+                                                        <b>Rights</b>: you have the right, among others, to rectify, limit and delete your data <br/>
+                                                        
+                                                        <b>Additional information</b>: You can consult the additional and detailed information on Data Protection in the
+                                                        
+                                                        <a href="/page/privacy-policy">Privacy Policy.</a><br/>
+                                                    </font>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                             <div class="clearfix">
                                 <a href="/shop/cart" class="btn btn-default mb32">
                                     <span class="fa fa-long-arrow-left"/> Return to Cart
