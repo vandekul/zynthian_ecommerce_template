@@ -3,10 +3,10 @@
 	<template id="website_legal_footer_extend" inherit_id="website.layout_footer_copyright" name="Website Legal Footer Extend">
 		<xpath expr="//div[@class='pull-left text-muted']" position="after">
 				<div class="pull-right text-muted">
-				<a href="/page/legal-notice">Legal Notice</a> <br/>
-				<a href="/page/cookies">Cookies Policy</a><br/>
-				<a href="/page/privacy-policy">Privacy Policy</a> <br/>
-				<a href="/page/terms-conditions">Terms and Conditions</a><br/>
+				<a href="https://zynthian.org/legal">Legal Notice</a> <br/>
+				<a href="https://zynthian.org/cookies">Cookies Policy</a><br/>
+				<a href="https://zynthian.org/privacy">Privacy Policy</a> <br/>
+				<a href="https://zynthian.org/terms">Terms and Conditions</a><br/>
 			</div>
 		</xpath>
 	</template>
